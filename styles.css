@@ -1,0 +1,88 @@
+   :root{
+      --bg:#ffffff;
+      --text:#0b0b0b;
+      --muted:#6b6b6b;
+      --accent:#000000;
+      --header-bg:#98A38B; /* color del header basado en la imagen */
+      --glass: rgba(0,0,0,0.04);
+      --radius:12px;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: 'Poppins', sans-serif; background:var(--bg); color:var(--text);
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    
+   header{
+position:sticky; top:0; z-index:80;
+background: var(--header-bg);
+border-bottom:1px solid var(--glass);
+color:#fff;
+
+}
+    .container{max-width:var(--maxw); margin:0 auto; padding:1rem}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    header h1{font-family:'Playfair Display', serif; font-size:1.2rem; margin:0; color:var(--accent)}
+    nav a{margin-left:1rem; color:var(--muted); text-decoration:none; font-weight:600}
+    nav a:hover{color:var(--text)}
+    nav a.active{color:var(--accent); border-bottom:2px solid var(--accent); padding-bottom:6px}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr;align-items:center;gap:2rem;padding:3rem 1rem}
+    .hero-inner{max-width:var(--maxw);margin:0 auto;display:flex;gap:2rem;align-items:center}
+    .hero .hero-text{flex:1}
+    .hero h2{font-family:'Playfair Display', serif;font-size:2rem;margin:0 0 .5rem}
+    .hero p{color:var(--muted);margin:0}
+    .hero .hero-img{flex:1}
+    .hero img{width:100%;height:auto;border-radius:var(--radius);box-shadow:0 6px 20px rgba(0,0,0,0.06)}
+
+    /* sections */
+    section{padding:2.5rem 1rem}
+    section .inner{max-width:var(--maxw);margin:0 auto}
+    h3{font-family:'Playfair Display', serif; font-size:1.4rem;margin-bottom:.4rem}
+    .muted{color:var(--muted)}
+
+    /* cards gallery */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .card{background:#fff;border:1px solid var(--glass);padding:1rem;border-radius:12px;display:flex;gap:1rem;align-items:center}
+    .card img{width:90px;height:70px;object-fit:cover;border-radius:8px}
+    .card h4{margin:0;font-size:1rem}
+    .price{color:var(--muted);font-weight:600}
+
+    /* reservation form (visual only) */
+    form{display:grid;grid-template-columns:repeat(2,1fr);gap:0.8rem;background:#fff;padding:1rem;border-radius:12px;border:1px solid var(--glass)}
+    form input, form select, form button{padding:.8rem;border-radius:8px;border:1px solid #e6e6e6;font-size:0.95rem}
+    form button{background:var(--accent);color:#fff;border:0;cursor:pointer}
+    form button:hover{opacity:.9}
+    .full{grid-column:1/-1}
+
+    /* footer */
+    footer{padding:2rem 1rem;border-top:1px solid var(--glass);text-align:center}
+
+    /* small screens */
+    @media (max-width:900px){
+      .grid{grid-template-columns:repeat(2,1fr)}
+      form{grid-template-columns:1fr}
+      .hero-inner{flex-direction:column}
+    }
+    @media (max-width:520px){
+      .grid{grid-template-columns:1fr}
+      nav a{margin-left:.6rem}
+      header h1{font-size:1rem}
+      .hero h2{font-size:1.6rem}
+    }
+
+    /* scroll to top */
+    #topBtn{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;border:0;padding:.7rem;border-radius:999px;cursor:pointer;display:none;box-shadow:0 8px 24px rgba(0,0,0,0.15)}
+
+    /* subtle hover on images */
+    .img-zoom{overflow:hidden;border-radius:12px}
+    .img-zoom img{transition:transform .6s ease}
+    .img-zoom:hover img{transform:scale(1.04)}
+
+    /* subtle section separators */
+    .sep{height:1px;background:linear-gradient(90deg,transparent,#f0f0f0,transparent);margin:2rem 0}

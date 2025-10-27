@@ -1,0 +1,180 @@
+	<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ryan D' Verso | Minimalista Moderno</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="styles.css">
+  
+  
+</head>
+<body>
+
+<header>
+  <div class="container topbar">
+    <h1>Ryan D' Verso</h1>
+    <nav id="nav">
+      <a href="#inicio" class="nav-link">Inicio</a>
+      <a href="#sobre" class="nav-link">Sobre</a>
+      <a href="#menu" class="nav-link">Menú</a>
+      <a href="#bebidas" class="nav-link">Bebidas</a>
+      <a href="#postres" class="nav-link">Postres</a>
+      <a href="#reservas" class="nav-link">Reservas</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="inicio" class="hero">
+    <div class="hero-inner container">
+      <div class="hero-text">
+        <h2>Sabores modernos, diseño minimalista</h2>
+        <p class="muted">En Ryan D' Verso combinamos técnicas contemporáneas con ingredientes de primera. Disfruta de una experiencia gastronómica en un ambiente moderno y elegante.</p>
+        <div style="margin-top:1rem">
+          <a href="#reservas" style="text-decoration:none"><button style="padding:.7rem 1rem;border-radius:8px;border:1px solid var(--accent);background:transparent;cursor:pointer">Reservar mesa</button></a>
+        </div>
+      </div>
+      <div class="hero-img img-zoom">
+        <img src="resta.png" alt="Hero restaurante" width="800" height="500">
+      </div>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <section id="sobre">
+    <div class="inner container">
+      <h3>Sobre nosotros</h3>
+      <p class="muted">Ryan D' Verso nace con la idea de ofrecer una propuesta gastronómica contemporánea en un espacio sencillo y elegante. Nuestro equipo trabaja con ingredientes locales y técnicas internacionales para crear platos memorables.</p>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="inner container">
+      <h3>Menú destacado</h3>
+      <div class="grid" style="margin-top:1rem">
+        <div class="card">
+          <img src="risoto.jpg" alt="plato 1">
+          <div>
+            <h4>Risotto de hongos</h4>
+            <div class="price">S/ 45</div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="salmon.jpg" alt="plato 2">
+          <div>
+            <h4>Salmon al horno</h4>
+            <div class="price">S/ 65</div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="ensa.jpg" alt="plato 3">
+          <div>
+            <h4>Ensalada de quinoa</h4>
+            <div class="price">S/ 32</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="bebidas">
+    <div class="inner container">
+      <h3>Bebidas</h3>
+      <p class="muted">Selecciona entre nuestras bebidas sin alcohol, vinos y cócteles de autor.</p>
+      <div class="grid" style="margin-top:1rem">
+        <div class="card"><img src="mojito.jpeg"><div><h4>Mojito Clásico</h4><div class="price">S/ 28</div></div></div>
+        <div class="card"><img src="jugo.jpg"><div><h4>Jugo natural</h4><div class="price">S/ 9</div></div></div>
+        <div class="card"><img src="vino.jpg"><div><h4>Vino tinto</h4><div class="price">S/ 80</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="postres">
+    <div class="inner container">
+      <h3>Postres</h3>
+      <div class="grid" style="margin-top:1rem">
+        <div class="card"><img src="chee.jpg"><div><h4>Cheesecake</h4><div class="price">S/ 18</div></div></div>
+        <div class="card"><img src="tira.jpg"><div><h4>Tiramisú</h4><div class="price">S/ 20</div></div></div>
+        <div class="card"><img src="bra.jpeg"><div><h4>Brownie</h4><div class="price">S/ 16</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reservas">
+    <div class="inner container">
+      <h3>Reservas </h3>
+      <p class="muted">Este formulario es solo demostrativo. No envía datos a ningún servidor.</p>
+      <form id="resForm" onsubmit="return false;">
+        <input type="text" id="nombre" placeholder="Tu nombre" required>
+        <input type="date" id="fecha" required>
+        <input type="time" id="hora" required>
+        <input type="number" id="personas" min="1" placeholder="Personas" required>
+        <input type="tel" id="telefono" placeholder="Teléfono (opcional)">
+        <textarea id="comentario" class="full" placeholder="Comentarios (opcional)" style="min-height:90px;border:1px solid #e6e6e6;padding:.8rem;border-radius:8px"></textarea>
+        <button class="full" id="sendBtn">Enviar reserva</button>
+      </form>
+      <div id="resMessage" style="display:none;margin-top:1rem;padding:1rem;border-radius:10px;background:#f6f6f6;border:1px solid var(--glass)"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p style="margin:0;font-weight:600">Ryan D' Verso</p>
+    <p class="muted" style="margin:.4rem 0">Av. Villa Paraiso, Arequipa — Lun-Dom 9:00 - 23:00 — ☎ 967 917 246</p>
+    <p class="muted">Síguenos: Instagram • Facebook • TikTok</p>
+  </div>
+</footer>
+
+<button id="topBtn" title="Ir arriba">↑</button>
+
+<script>
+  // scroll to top button
+  const topBtn = document.getElementById('topBtn');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 400) topBtn.style.display = 'block'; else topBtn.style.display = 'none';
+  });
+  topBtn.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}));
+
+  // simple reservation visual behavior
+  document.getElementById('sendBtn').addEventListener('click', ()=>{
+    const name = document.getElementById('nombre').value || '—';
+    const date = document.getElementById('fecha').value || '—';
+    const time = document.getElementById('hora').value || '—';
+    const people = document.getElementById('personas').value || '—';
+    const msg = document.getElementById('resMessage');
+    msg.style.display = 'block';
+    msg.innerHTML = `<strong>Reserva simulada enviada</strong><p class=\"muted\">Nombre: ${name} · Fecha: ${date} · Hora: ${time} · Personas: ${people}</p><p class=\"muted\">Recibirás confirmación por teléfono si este fuera un formulario real.</p>`;
+    // clear fields (visual)
+    // document.getElementById('resForm').reset();
+  });
+
+  // highlight nav links based on section in view
+  const links = document.querySelectorAll('.nav-link');
+  const sections = Array.from(links).map(l => document.querySelector(l.getAttribute('href')));
+  const obs = new IntersectionObserver(entries =>{
+    entries.forEach(ent=>{
+      const id = ent.target.id;
+      const link = document.querySelector(`nav a[href="#${id}"]`);
+      if(ent.isIntersecting){
+        link.classList.add('active');
+      } else { link.classList.remove('active'); }
+    });
+  },{threshold:0.55});
+  sections.forEach(s => { if(s) obs.observe(s); });
+</script>
+<audio id="musica" src="mity.mp3" loop></audio>
+
+<script>
+  // Reproducir la canción cuando el usuario haga clic en cualquier parte
+  document.addEventListener("click", () => {
+    const audio = document.getElementById("musica");
+    audio.play();
+  }, { once: true }); // solo la primera vez
+</script>
+</body>
+</html>
+ 
